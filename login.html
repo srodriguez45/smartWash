@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="col-xs-12.fluid">
+<head>
+	<title>Ingreso - Smart Wash</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+	<meta name="name" content="content">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+	
+	<body class="fondo1 col-xs-12-fluid">
+
+		<section id="principal" class="col-xs-12-fluid">
+			
+			<div class="contenedor border2">
+
+						<figure class="logo">
+							<a href="index.html"><img src="img/logo.png" alt="Smart Wash Logo" class="logo_img"></a>
+						</figure>					
+						
+						<p>Sistema de gestión de procesos en autolavados</br>Ingresa con tu usuario y contraseña</p>
+
+						<form id="validate" class="login_form" action="index.html" novalidate="novalidate" method="post">
+								<div class="icon_form usuario">
+									<label class="fondo1 cblanco usuario" for="usuario" title="Usuario"></label>
+									<input id="usuario" type="text" name="nombre" class="input" placeholder="Usuario" required="required" maxlength="30"
+									 title="Ingresa un nombre de usuario válido">
+								</div>
+								<div class="icon_form contraseña">
+									<label class="fondo1 cblanco contrasena" for="contraseña" title="Contraseña"></label>
+									<input id="contraseña" type="password" autocomplete="off" name="contrasena" class="input" placeholder="Contraseña" required="required" title="Ingresa una contraseña válida">
+								</div>
+								<div class="icon_form button">
+									<input type="submit" class="btn fondo2 cblanco cblancoh fondoh1" value="Ingresar">
+								</div>
+
+								<span class="forget"><a class="color1 colorh2" href="recuperarPass.html">¿Olvidó su contraseña? </a> |    
+									<a href="#ventana1" class="color1 colorh2" data-toggle="modal">Registrarse</a>
+								</span>
+						</form>
+
+			</div>
+
+			<!-- fin section 1 -->
+
+		</section>
+
+
+		<!-- modal register -->
+		<div class="modal fade" id="ventana1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- header de la ventana -->
+					<div class="modal-header fondo1 regblanco">
+						<button class="close" tyle="button" data-dismiss="modal" aria-hiden="true">&times;</button>
+							<h4 class="modal-title">Crea una Cuenta</h4>	
+					</div>
+						<!-- contenido de la ventana -->
+					<div class="modal-body">
+						<form id="formlogin" action="" method="post" name="">
+							<div class="">
+								<label class="labels" for="Nombre" title="Nombre">Nombres<span class="regred"> *</span></label>
+								<input id="Regnombre" type="text" name="regnombre" class="inputreg form-control" placeholder="Nombres" required="required" autocomplete="off">
+							</div>
+							<div class="">
+								<label class="labels" for="email">Correo Electronico<span class="regred"> *</span></label>
+								<input type="email" id="email" name="email" tabindex="1" required="required" class="form-control inputreg" placeholder="micorreo@hotmail.com" value="" pattern="[a-zA-Z0-9_]+([.][a.zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a.zA-Z0-9_]+)*[.][a-zA-Z]{1,15}">
+							</div>
+							<div class="">
+								<label class="labels" for="ciudad" title="ciudad">Identificación <span class="regred">*</span></label>
+								<select name="ciudad" class="form-control inputname" required="required">
+									<option>Tipo de documento</option>
+									<option value="cc">Cédula de cudadania</option>
+									<option value="ce">Cédula extranjería</option>
+									<option value="ti">Tarjeta de identidad</option>
+									<option value="rc">Registro civil</option>
+									<option value="nt">NIT</option>
+								</select>
+								<input id="identificacion" type="text" name="identificacion" class="inputname form-control" placeholder="Numero de identificación" required="required" autocomplete="off">
+							</div>
+							<div class="">
+								<label class="labels" for="telefono" title="telefono">Teléfono / Celular<span class="regred"> *</span></label>
+								<input id="telefono" type="tel" name="telefono" class="form-control inputreg" placeholder="telefono" required="required">
+							</div>
+							
+							<!-- aca hiba el rol pero no es necesario -->
+
+							<!-- <div class="">
+								<label class="labels" for="direccion" title="direccion">Dirección</label>
+								<input id="direccion" type="text" name="direccion" class="form-control inputreg" placeholder="direccion electrónico" required="required">
+							</div> -->
+
+							<!-- <input id="pais" type="text" name="pais" class="input" placeholder="pais electrónico" required="required"> -->
+							<div class="">
+								<label class="labels" for="pais" title="pais">Ubicación <span class="regred">*</span></label>
+								<select name="pais" class="form-control inputname" required="required">
+									<option>Seleccione un País</option>
+									<option value="Colombia">Colombia</option>
+									<option value="Venezuela">Venezuela</option>
+									<option value="Peru">Peru</option>
+									<option value="Ecuador">Ecuador</option>
+									<option value="Argentina">Argentina</option>
+									<option value="Estado Unidos">Estado Unidos</option>
+									<option value="Argentina">Brasil</option>
+								</select>
+								<select name="ciudad" class="form-control inputname" required="required">
+									<option>Seleccione la Ciudad</option>
+									<option value="Bogotá DC">Bogota DC</option>
+									<option value="Medellin">Medellin</option>
+									<option value="Cali">Cali</option>
+									<option value="Cartagena">Cartagena</option>
+									<option value="Bucaramanga">Bucaramanga</option>
+									<option value="Barranquilla">Barranquilla</option>
+									<option value="Pasto">Pasto</option>
+								</select>
+								<!-- <input id="ciudad" type="text" name="ciudad" class="input" placeholder="ciudad" required="required"> -->
+							</div>
+
+							<div class="">
+								<label class="labels" for="pass" title="Contraseña Nueva">Contraseña<span class="cred"> *</span></label>
+								<input id="pass" type="password" name="passnew" class="form-control inputreg" placeholder="Digite una Nueva contraseña segura" required="required" autocomplete="off">
+							</div>
+							<div class="">
+								<label class="labels" for="pass" title="Confirme Contraseña">Confirme Contraseña<span class="cred"> *</span></label>
+								<input id="pass" type="password" name="passconfirmation" class="form-control inputreg" placeholder="Confirme la contraseña" required="required" autocomplete="off">
+							</div>
+
+							<div class="">
+								<input type="submit" class="regbutton fondo1 fondoh2" value="Crear Cuenta">
+							</div>
+
+
+						</form>
+					</div>
+					<!-- fin del contenido de la ventana -->
+
+				</div>
+			</div>
+		</div>
+
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="js/validarLogin.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+
+</body>
+</html>
